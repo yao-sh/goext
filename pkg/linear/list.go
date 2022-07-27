@@ -1,4 +1,11 @@
-package list
+package linear
+
+import "fmt"
+
+type LinkedListNode struct {
+	Value interface{}
+	Next  *LinkedListNode
+}
 
 type LinkedList struct {
 	Head *LinkedListNode
@@ -43,4 +50,17 @@ func (l *LinkedList) Length() int {
 		current = current.Next
 	}
 	return count
+}
+
+func (l *LinkedList) Display() {
+	current := l.Head
+	for current != nil {
+		if current.Next != nil {
+			fmt.Printf("%v => ", current.Value)
+		} else {
+			fmt.Printf("%v", current.Value)
+		}
+		current = current.Next
+	}
+	println()
 }

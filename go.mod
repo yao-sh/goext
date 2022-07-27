@@ -9,3 +9,4 @@ require (
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/smartystreets/assertions v1.2.0 // indirect
 )
+replace "github.com/yao-sh/goext" v0.0.0 => "./pkg/list"
